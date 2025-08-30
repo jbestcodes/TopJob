@@ -1,8 +1,14 @@
+body, #root {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* or center if you prefer */
+  min-height: 100vh;
 }
 
 .logo {
@@ -39,4 +45,31 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-indigo-50 {
+  background-color: #eef2ff;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

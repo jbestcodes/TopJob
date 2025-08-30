@@ -21,15 +21,6 @@ export default function Structure() {
             </ul>
           </li>
         </ul>
-        <h3 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Main Executives</h3>
-        <ul className="list-disc list-inside text-slate-700 ml-4 space-y-1">
-          <li>
-            <span className="font-semibold">Name:</span> Ezekiel Omukuyia Luchera &mdash; <span className="font-semibold">Post:</span> Director, Administration
-          </li>
-          <li>
-            <span className="font-semibold">Name:</span> Pauline Dalitzu &mdash; <span className="font-semibold">Post:</span> Director
-          </li>
-        </ul>
       </div>
 
       {/* Preposition */}

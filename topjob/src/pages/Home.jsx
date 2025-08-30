@@ -5,22 +5,28 @@ import Footer from "../components/ui/Footer";
 
 const slides = [
   {
+    type: "text",
     title: "About Us",
     description: "Top Job Human Resource Consulting is a leading HR firm in Kenya, providing innovative and customized HR solutions to organizations and individuals.",
     color: "from-blue-700 to-blue-900",
-    section: "about"
   },
   {
+    type: "image",
+    image: "/hr.png",
+    alt: "HR Illustration",
+    color: "from-emerald-600 to-teal-700",
+  },
+  {
+    type: "text",
     title: "Our Services",
     description: "We offer Recruitment, Outsourcing, Payroll, Training, and HR Consultancy services tailored to your business needs.",
-    color: "from-emerald-600 to-teal-700",
-    section: "services"
+    color: "from-emerald-700 to-blue-700",
   },
   {
+    type: "text",
     title: "Contact Us",
     description: "Partner with Top Job for reliable, professional, and efficient HR solutions. Get in touch today.",
     color: "from-indigo-700 to-purple-800",
-    section: "contact"
   },
 ];
 
@@ -28,57 +34,54 @@ export default function HomePage() {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-slide every 4 seconds unless paused
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [isPaused, slides.length]);
+  }, [isPaused]);
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-slate-200">
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4">
+      <main className="flex-1 w-full">
         {/* Hero Section */}
         <section
-          className="relative flex flex-col items-center justify-center text-center py-20 md:py-32 shadow-lg min-h-[350px] md:min-h-[420px] bg-slate-900"
+          className="relative flex flex-col items-center justify-center text-center px-4 py-10 md:py-16 shadow-lg min-h-[250px] md:min-h-[320px] bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-100"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="w-full max-w-3xl mx-auto px-2 md:px-0">
-            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight drop-shadow-lg leading-tight text-yellow-300" style={{textShadow: '0 2px 8px rgba(0,0,0,0.25)'}}>
-              Top Job Human Resource Consulting
-            </h1>
-            <div
-              className={`relative rounded-xl p-6 md:p-10 mt-6 mb-2 shadow-lg border min-h-[120px] md:min-h-[160px] flex flex-col items-center justify-center transition-all duration-700 cursor-pointer bg-gradient-to-r ${slides[current].color} text-white`}
-              onClick={() => {
-                const section = document.getElementById(slides[current].section);
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-              }}
-              title="Click to jump to section"
-            >
-              <h2 className="text-2xl md:text-3xl font-semibold mb-2 animate-fade-in">
-                {slides[current].title}
-              </h2>
-              <p className="max-w-xl mx-auto text-base md:text-xl font-medium animate-fade-in">
-                {slides[current].description}
-              </p>
-            </div>
-            {/* Slide controls */}
-            <div className="flex justify-center gap-3 mt-6">
-              {slides.map((slide, idx) => (
-                <button
-                  key={idx}
-                  className={`w-3 h-3 rounded-full border-2 border-white transition-all duration-300 ${current === idx ? 'bg-white/90 scale-125' : 'bg-white/40 hover:bg-white/70'}`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  onClick={() => setCurrent(idx)}
-                  style={{ outline: current === idx ? '2px solid #fff' : 'none' }}
-                />
-              ))}
-            </div>
-            <div className="mt-2 text-xs text-white/70">(Hover to pause slides, click slide to jump to section)</div>
+          <div className="w-full max-w-2xl mx-auto z-10">
+            {slides[current].type === "text" ? (
+              <>
+                <h1 className="text-2xl md:text-4xl font-extrabold mb-4 tracking-tight drop-shadow-lg leading-tight text-indigo-900">
+                  {slides[current].title}
+                </h1>
+                <p className="text-indigo-800 text-base md:text-xl mb-2">
+                  {slides[current].description}
+                </p>
+              </>
+            ) : (
+              <img
+                src={slides[current].image}
+                alt={slides[current].alt}
+                className="mx-auto w-80 h-40 md:w-[32rem] md:h-48 object-contain rounded-xl shadow-lg"
+              />
+            )}
           </div>
+          {/* Slide controls */}
+          <div className="flex justify-center gap-3 mt-4 z-10">
+            {slides.map((slide, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full border-2 border-indigo-400 transition-all duration-300 ${current === idx ? 'bg-indigo-400 scale-125' : 'bg-indigo-200 hover:bg-indigo-300'}`}
+                aria-label={`Go to slide ${idx + 1}`}
+                onClick={() => setCurrent(idx)}
+                style={{ outline: current === idx ? '2px solid #6366f1' : 'none' }}
+              />
+            ))}
+          </div>
+          <div className="mt-2 text-xs text-indigo-500 z-10">(Hover to pause slides)</div>
         </section>
 
         {/* About Section */}

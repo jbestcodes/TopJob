@@ -1,5 +1,6 @@
 // src/pages/HomePage.jsx
 import { useEffect, useState } from "react";
+import ClientsSlider from "../components/ClientsSlider";
 
 const slides = [
   {
@@ -134,6 +135,14 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Clients Section - Now above Contact */}
+      <section className="py-16 px-4 md:px-0 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">Our Clients</h2>
+          <ClientsSlider />
         </div>
       </section>
 

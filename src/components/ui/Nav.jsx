@@ -7,7 +7,7 @@ export default function Nav() {
         {/* Left: Logo, Name, Tagline */}
         <div className="flex flex-col items-start">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Top Job Logo" className="h-10 w-10 object-contain rounded" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Top Job Logo" className="h-10 w-10 object-contain rounded" />
             <span className="font-bold text-xl tracking-wide">Top Job</span>
           </div>
           <span className="text-xs text-slate-200 mt-1">

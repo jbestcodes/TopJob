@@ -12,7 +12,7 @@ const slides = [
   },
   {
     type: "image",
-    image: "/hr.png",
+    image: `${import.meta.env.BASE_URL}hr.png`,
     alt: "HR Illustration",
     color: "from-emerald-600 to-teal-700",
   },

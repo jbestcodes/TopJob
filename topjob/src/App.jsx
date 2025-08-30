@@ -5,10 +5,9 @@ import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Structure from "./pages/Structure"; // If you want the structure page
 
-
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/TopJob">
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,6 +19,4 @@ function App() {
   );
 }
 
-
-
-export default App
+export default App;

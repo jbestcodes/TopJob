@@ -1,4 +1,5 @@
 import Footer from "../components/ui/Footer";
+import { FaUserTie, FaUsersCog, FaMoneyCheckAlt, FaChalkboardTeacher, FaClipboardCheck, FaIdBadge } from "react-icons/fa";
 
 export default function Services() {
   return (
@@ -6,7 +7,8 @@ export default function Services() {
       <h1 className="text-4xl font-bold text-center text-emerald-800 mb-10">Our Services</h1>
       <div className="space-y-10">
         {/* Recruitment & Staffing */}
-        <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
+        <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600 flex flex-col items-center">
+          <FaUserTie className="text-3xl text-emerald-600 mb-2" />
           <h2 className="text-2xl font-semibold text-emerald-700 mb-3">Recruitment & Staffing</h2>
           <p className="text-slate-700 mb-2">
             We provide end-to-end recruitment solutions for organizations seeking to attract, select, and retain top talent. Our recruitment process is thorough and tailored to your needs, including:
@@ -24,8 +26,11 @@ export default function Services() {
         </section>
 
         {/* HR Outsourcing */}
-        <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
-          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">HR Outsourcing</h2>
+        <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600 flex flex-col items-center">
+          <FaUsersCog className="text-3xl text-emerald-600 mb-2" />
+          <h2 className="text-2xl font-semibold text-emerald-700 mb-3 text-center">
+            HR Outsourcing
+          </h2>
           <p className="text-slate-700 mb-2">
             Our HR outsourcing services allow you to focus on your core business while we manage your HR functions. We offer:
           </p>
@@ -42,7 +47,10 @@ export default function Services() {
 
         {/* Payroll Management */}
         <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
-          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">Payroll Management</h2>
+          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">
+            <FaMoneyCheckAlt className="inline-block mr-2 text-emerald-600" />
+            Payroll Management
+          </h2>
           <p className="text-slate-700 mb-2">
             Our payroll management solutions ensure timely and accurate payroll processing, including:
           </p>
@@ -59,7 +67,10 @@ export default function Services() {
 
         {/* Training & Development */}
         <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
-          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">Training & Development</h2>
+          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">
+            <FaChalkboardTeacher className="inline-block mr-2 text-emerald-600" />
+            Training & Development
+          </h2>
           <p className="text-slate-700 mb-2">
             We offer tailored training programs to enhance employee skills and organizational growth, including:
           </p>
@@ -76,7 +87,10 @@ export default function Services() {
 
         {/* HR Consultancy */}
         <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
-          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">HR Consultancy</h2>
+          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">
+            <FaClipboardCheck className="inline-block mr-2 text-emerald-600" />
+            HR Consultancy
+          </h2>
           <p className="text-slate-700 mb-2">
             Our consultancy services provide expert guidance on all HR matters, such as:
           </p>
@@ -93,7 +107,10 @@ export default function Services() {
 
         {/* Background Checks */}
         <section className="bg-white rounded-xl shadow p-8 border-t-4 border-emerald-600">
-          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">Background Checks</h2>
+          <h2 className="text-2xl font-semibold text-emerald-700 mb-3">
+            <FaIdBadge className="inline-block mr-2 text-emerald-600" />
+            Background Checks
+          </h2>
           <p className="text-slate-700 mb-2">
             We conduct thorough background checks to help you make informed hiring decisions, including:
           </p>

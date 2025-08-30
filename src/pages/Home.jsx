@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import ClientsSlider from "../components/ClientsSlider";
 import Footer from "../components/ui/Footer";
+import { FaUserTie, FaUsersCog, FaMoneyCheckAlt, FaChalkboardTeacher, FaClipboardCheck, FaIdBadge } from "react-icons/fa";
 
 const slides = [
   {
@@ -82,6 +83,18 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-2 text-xs text-indigo-500 z-10">(Hover to pause slides)</div>
+          {/* Background image */}
+          <div
+            className="absolute inset-0 w-full h-full z-0"
+            style={{
+              backgroundImage: `url(${import.meta.env.BASE_URL}background.png)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.25,
+            }}
+          />
+          {/* Optional color overlay */}
+          <div className="absolute inset-0 bg-indigo-100/60 z-0" />
         </section>
 
         {/* About Section */}
@@ -103,37 +116,43 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 mb-10 text-center">Our Services</h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaUserTie className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Recruitment & Staffing</h3>
                 <p className="text-slate-700 flex-1">
                   We provide end-to-end recruitment solutions, helping organizations attract, select, and retain top talent. Our process ensures the right fit for both employers and job seekers.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaUsersCog className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">HR Outsourcing</h3>
                 <p className="text-slate-700 flex-1">
                   Top Job offers comprehensive HR outsourcing services, allowing you to focus on your core business while we handle your HR functions efficiently and professionally.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaMoneyCheckAlt className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Payroll Management</h3>
                 <p className="text-slate-700 flex-1">
                   Our payroll management solutions ensure timely and accurate payroll processing, statutory compliance, and confidentiality for your organization.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaChalkboardTeacher className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Training & Development</h3>
                 <p className="text-slate-700 flex-1">
                   We offer tailored training programs to enhance employee skills, productivity, and organizational growth.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaClipboardCheck className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">HR Consultancy</h3>
                 <p className="text-slate-700 flex-1">
                   Our HR consultancy services cover compliance, performance management, organizational development, and more, providing expert guidance for your HR challenges.
                 </p>
               </div>
-              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full">
+              <div className="bg-white rounded-lg shadow p-8 border-t-4 border-emerald-600 flex flex-col h-full items-center">
+                <FaIdBadge className="text-3xl text-emerald-600 mb-3" />
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Background Checks</h3>
                 <p className="text-slate-700 flex-1">
                   We conduct thorough background checks to help you make informed hiring decisions and maintain a trustworthy workforce.

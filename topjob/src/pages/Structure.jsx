@@ -1,3 +1,5 @@
+import Footer from "../components/ui/Footer";
+
 export default function Structure() {
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
@@ -121,6 +123,8 @@ export default function Structure() {
           <div className="bg-blue-100 text-blue-900 px-4 py-2 rounded font-semibold">Technical Support Dept.</div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

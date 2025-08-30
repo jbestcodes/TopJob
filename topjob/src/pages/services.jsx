@@ -1,3 +1,5 @@
+import Footer from "../components/ui/Footer";
+
 export default function Services() {
   return (
     <div className="max-w-5xl mx-auto py-16 px-4">
@@ -106,6 +108,7 @@ export default function Services() {
           </p>
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

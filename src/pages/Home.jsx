@@ -90,7 +90,7 @@ export default function HomePage() {
               backgroundImage: `url(${import.meta.env.BASE_URL}background.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.25,
+              opacity: 0.35, // Increased from 0.25 to 0.35
             }}
           />
           {/* Optional color overlay */}
@@ -101,6 +101,11 @@ export default function HomePage() {
         <section id="about" className="py-16 bg-white border-b border-slate-200 scroll-mt-24">
           <div className="max-w-4xl mx-auto rounded-xl shadow-md bg-slate-50 p-8 md:p-12">
             <h2 className="text-3xl font-bold text-blue-900 mb-4 text-center">About Us</h2>
+            <img
+              src={`${import.meta.env.BASE_URL}about.png`}
+              alt="About Top Job Human Resource Consulting"
+              className="mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg h-auto mb-6 rounded-lg shadow"
+            />
             <p className="text-lg text-slate-700 leading-relaxed text-center">
               Top Job Human Resource Consulting is a leading HR firm in Kenya, providing innovative and customized HR solutions to organizations and individuals. 
               <br /><br />

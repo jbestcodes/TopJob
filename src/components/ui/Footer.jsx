@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-xs text-slate-500 py-2 border-t border-slate-800">
-        &copy; {new Date().getFullYear()} Top Job Human Resource Consulting. All rights reserved.
+        &copy; {new Date().getFullYear()} Top Job Human Resource Consulting. All rights reserved. | Website by <a href="https://julieadul.site" target="_blank" rel="noopener noreferrer" className="underline text-indigo-300">julieadul.site</a>
       </div>
     </footer>
   );

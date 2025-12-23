@@ -9,25 +9,41 @@ const slides = [
     type: "text",
     title: "About Us",
     description: "Top Job Human Resource Consulting is a leading HR firm in Kenya, providing innovative and customized HR solutions to organizations and individuals.",
-    color: "from-blue-700 to-blue-900",
-  },
-  {
-    type: "image",
-    image: `${import.meta.env.BASE_URL}hr.png`,
-    alt: "HR Illustration",
-    color: "from-emerald-600 to-teal-700",
   },
   {
     type: "text",
-    title: "Our Services",
-    description: "We offer Recruitment, Outsourcing, Payroll, Training, and HR Consultancy services tailored to your business needs.",
-    color: "from-emerald-700 to-blue-700",
+    title: "Recruitment & Staffing",
+    description: "We provide end-to-end recruitment solutions, helping organizations attract, select, and retain top talent. Our process ensures the right fit for both employers and job seekers.",
+  },
+  {
+    type: "text",
+    title: "HR Outsourcing",
+    description: "Top Job offers comprehensive HR outsourcing services, allowing you to focus on your core business while we handle your HR functions efficiently and professionally.",
+  },
+  {
+    type: "text",
+    title: "Payroll Management",
+    description: "Our payroll management solutions ensure timely and accurate payroll processing, statutory compliance, and confidentiality for your organization.",
+  },
+  {
+    type: "text",
+    title: "Training & Development",
+    description: "We offer tailored training programs to enhance employee skills, productivity, and organizational growth.",
+  },
+  {
+    type: "text",
+    title: "HR Consultancy",
+    description: "Our HR consultancy services cover compliance, performance management, organizational development, and more, providing expert guidance for your HR challenges.",
+  },
+  {
+    type: "text",
+    title: "Background Checks",
+    description: "We conduct thorough background checks to help you make informed hiring decisions and maintain a trustworthy workforce.",
   },
   {
     type: "text",
     title: "Contact Us",
     description: "Partner with Top Job for reliable, professional, and efficient HR solutions. Get in touch today.",
-    color: "from-indigo-700 to-purple-800",
   },
 ];
 
